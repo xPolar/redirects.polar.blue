@@ -10,9 +10,9 @@ interface RedirectPageProps {
 }
 
 const RedirectPage: NextPage<RedirectPageProps> = ({ redirectTo, embed }) => {
-	// useEffect(() => {
-	// 	window.location.assign(redirectTo || process.env.NEXT_PUBLIC_DEFAULT_URL);
-	// }, []);
+	useEffect(() => {
+		window.location.assign(redirectTo || process.env.NEXT_PUBLIC_DEFAULT_URL);
+	}, []);
 
 	return (
 		<Head>
